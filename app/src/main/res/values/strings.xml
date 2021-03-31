@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SmartCity</string>
+    <string name="label">Teste</string>
+    <string name="credenciais">Insira as suas credenciais:</string>
 </resources>
