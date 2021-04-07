@@ -1,6 +1,8 @@
 package ipvc.estg.smartcity
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
 import kotlinx.android.synthetic.main.activity_main.*
@@ -16,7 +18,12 @@ class MainActivity : AppCompatActivity() {
         catch (e: NullPointerException) {}
         setContentView(R.layout.activity_main)
 
+        val buttonnotepad = findViewById<Button>(R.id.notas)
+            buttonnotepad.setOnClickListener{
 
+                val intent = Intent(this, Notepad::class.java)
+                startActivity(intent)
+            }
         // Get input text
        // val inputText = outlinedTextField.editText?.text.toString()
 
