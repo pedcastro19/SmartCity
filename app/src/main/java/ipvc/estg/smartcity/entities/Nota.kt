@@ -10,7 +10,7 @@ data class Nota (
     @PrimaryKey(autoGenerate = true)
         val id: Int,
         val titulo: String,
-        val texto: String,
-        val horaData: String
+        val descricao: String
+        //val horaData: String
 
 )

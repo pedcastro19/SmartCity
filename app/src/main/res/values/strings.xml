@@ -3,4 +3,6 @@
     <string name="login">Username</string>
     <string name="pass">Password</string>
     <string name="credenciais">Insira as suas credenciais:</string>
+    <string name="newtitle">Insira o título:</string>
+    <string name="newnota">Insira a nota:</string>
 </resources>

@@ -12,11 +12,11 @@ import kotlinx.coroutines.launch
 
 class Notaviewmodel(application: Application): AndroidViewModel(application) {
 
-    private val lertudo: LiveData<List<Nota>>
+     val lertudo: LiveData<List<Nota>>
     private val repositorio: Notarepositorio
 
     init{
-        val notaDao = NotasDatabase.getDatabase(application).notaDAO()
+        val notaDao = NotasDatabase.getDatabase(application, viewModelScope).notaDAO()
         repositorio = Notarepositorio(notaDao)
         lertudo = repositorio.lertudo
     }

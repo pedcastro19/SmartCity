@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="316dp"
+        android:layout_marginTop="292dp"
         android:fontFamily="@font/roboto"
         android:text="@string/credenciais"
         android:textColor="@color/colorPrimary"
