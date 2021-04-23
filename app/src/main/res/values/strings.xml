@@ -5,4 +5,6 @@
     <string name="credenciais">Insira as suas credenciais:</string>
     <string name="newtitle">Insira o título:</string>
     <string name="newnota">Insira a nota:</string>
+    <string name="edittitle">Edite o título:</string>
+    <string name="editnota">Edite a nota:</string>
 </resources>
