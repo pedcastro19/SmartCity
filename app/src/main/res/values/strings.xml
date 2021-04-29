@@ -7,4 +7,14 @@
     <string name="newnota">Insira a nota:</string>
     <string name="edittitle">Edite o título:</string>
     <string name="editnota">Edite a nota:</string>
+
+    <string name="yes" >Sim</string>
+    <string name="done">Dados removidos com sucesso!</string>
+    <string name="doneone">Nota removida com sucesso!</string>
+    <string name="no" >Não</string>
+    <string name="deleteevery" >Deseja eliminar todos os dados?</string>
+    <string name="deleteone">Deseja eliminar esta nota?</string>
+    <string name="areyousure" >Têm a certeza?</string>
+
+
 </resources>

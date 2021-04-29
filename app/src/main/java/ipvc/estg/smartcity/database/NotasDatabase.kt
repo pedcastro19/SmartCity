@@ -24,9 +24,9 @@ abstract class NotasDatabase: RoomDatabase(){
             super.onOpen(db)
             INSTANCE?.let { database ->
                 scope.launch {
-                    var notaDAO = database.notaDAO()
-                    var nota = Nota(1, "Viana do Castelo", "Portugal")
-                    notaDAO.addNota(nota)
+                    //var notaDAO = database.notaDAO()
+                    //var nota = Nota(1, "Viana do Castelo", "Portugal")
+                    //notaDAO.addNota(nota)
 
                 }
             }

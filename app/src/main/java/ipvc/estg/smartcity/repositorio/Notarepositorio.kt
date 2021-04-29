@@ -12,4 +12,17 @@ class Notarepositorio(private val notaDAO: notaDAO) {
         notaDAO.addNota(nota)
     }
 
+    suspend fun updateNotas(nota: Nota){
+        notaDAO.updateNotas(nota)
+    }
+
+    suspend fun deleteporid(id: Int){
+        notaDAO.deleteporid(id)
+    }
+
+    suspend fun deleteAllNotas(){
+        notaDAO.deleteAllNotas()
+    }
+
+
 }

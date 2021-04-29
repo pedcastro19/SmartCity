@@ -27,4 +27,23 @@ class Notaviewmodel(application: Application): AndroidViewModel(application) {
         }
     }
 
+    fun updateNotas(nota: Nota) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repositorio.updateNotas(nota)
+        }
+    }
+
+   fun deleteporid(id: Int){
+       viewModelScope.launch(Dispatchers.IO) {
+       repositorio.deleteporid(id)
+        }
+   }
+
+    fun deleteAllNotas(){
+        viewModelScope.launch(Dispatchers.IO) {
+            repositorio.deleteAllNotas()
+        }
+    }
+
+
 }

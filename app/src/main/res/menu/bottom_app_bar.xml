@@ -2,20 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/search"
-        android:icon="@drawable/ic_search_24"
-        android:title="search"
-        android:contentDescription="content_description_search"
-        app:backgroundTint="@color/colorSecondary"
+        android:id="@+id/delete"
+        android:icon="@drawable/baseline_delete_forever_24"
+        android:title="delete"
+        android:contentDescription="content_description_searc"
+        app:backgroundTint="@color/white"
+        android:iconTint="@color/white"
         app:showAsAction="ifRoom"
-        />
-
-    <item
-        android:id="@+id/more"
-        android:title="more"
-        android:contentDescription="content_description_more"
-        app:backgroundTint="@color/colorSecondary"
-        app:showAsAction="never"
         />
 
 </menu>

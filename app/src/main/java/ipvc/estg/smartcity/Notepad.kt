@@ -1,17 +1,21 @@
 package ipvc.estg.smartcity
 
+import android.R.id.toggle
+import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import androidx.core.content.ContentProviderCompat.requireContext
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.switchmaterial.SwitchMaterial
 import ipvc.estg.smartcity.viewmodel.Notaviewmodel
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.linelayout.*
 import kotlinx.android.synthetic.main.notepad.*
+
 
 class Notepad : AppCompatActivity() {
 
@@ -24,16 +28,14 @@ class Notepad : AppCompatActivity() {
         catch (e: NullPointerException) {}
 
         bottomAppBar.setNavigationOnClickListener {
-            // Handle navigation icon press
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
+
         bottomAppBar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.search -> {
-                    // Handle search icon press
-                    true
-                }
-                R.id.more -> {
-                    // Handle more item (inside overflow menu) press
+                R.id.delete-> {
+                    deleteAll()
                     true
                 }
                 else -> false
@@ -47,7 +49,6 @@ class Notepad : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //val view = inflater.inflate(R.layout.notepad, container, false)
 
         //RecyclerView
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
@@ -57,14 +58,25 @@ class Notepad : AppCompatActivity() {
 
         //ViewModel
         mNotaviewmodel = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(this.getApplication())).get(Notaviewmodel::class.java)
-        //mNotaviewmodel = ViewModelProvider(this).get(Notaviewmodel::class.java)
         mNotaviewmodel.lertudo.observe(this, Observer { nota ->
             adapter.setData(nota)
         })
-
-
-
-
     }
+
+    private fun deleteAll() {
+        val builder = AlertDialog.Builder(this)
+        builder.setPositiveButton(getResources().getString(R.string.yes)) { _, _ ->
+            mNotaviewmodel.deleteAllNotas()
+            Toast.makeText(
+                this,
+                getResources().getString(R.string.done),
+                Toast.LENGTH_SHORT).show()
+        }
+        builder.setNegativeButton(getResources().getString(R.string.no)) { _, _ -> }
+        builder.setTitle(getResources().getString(R.string.deleteevery))
+        builder.setMessage(getResources().getString(R.string.areyousure))
+        builder.create().show()
+    }
+
 
 }
