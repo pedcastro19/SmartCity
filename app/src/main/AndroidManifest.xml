@@ -11,8 +11,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".editarnota"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name=".TestActivity"></activity>
+        <activity android:name=".editarnota" />
         <activity android:name=".NovaNota" />
         <activity android:name=".Notepad" />
         <activity android:name=".MainActivity">
