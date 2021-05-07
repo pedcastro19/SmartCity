@@ -24,10 +24,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        try {
-            this.supportActionBar!!.hide()
-            }
-        catch (e: NullPointerException) {}
+
+        try { this.supportActionBar!!.hide() } catch (e: NullPointerException) {}
+
         setContentView(R.layout.activity_main)
 
         val buttonnotepad = findViewById<Button>(R.id.notas)
@@ -69,7 +68,7 @@ class MainActivity : AppCompatActivity() {
 
         else {
 
-            val intent = Intent(this, TestActivity::class.java)
+            val intent = Intent(this, Mapa::class.java)
             startActivity(intent)
             finish()
 
@@ -82,7 +81,7 @@ class MainActivity : AppCompatActivity() {
         val request = ServiceBuilder.buildService(EndPoints::class.java)
         val call = request.getUserByNome(user)
 
-        val intent = Intent(this, TestActivity::class.java)
+        val intent = Intent(this, Mapa::class.java)
 
         call.enqueue(object : Callback<User> {
 
@@ -97,6 +96,7 @@ class MainActivity : AppCompatActivity() {
 
                         editor.putString("USERNAME", user)
                         editor.putString("PASSWORD", pass)
+                        editor.putInt("ID", c.id)
                         editor.apply()
 
                         startActivity(intent)

@@ -7,6 +7,8 @@
     <string name="newnota">Insira a nota:</string>
     <string name="edittitle">Edite o título:</string>
     <string name="editnota">Edite a nota:</string>
+    <string name="guardar">Guardar</string>
+    <string name="titulo">Título</string>
 
     <string name="yes">Sim</string>
     <string name="done">Dados removidos com sucesso!</string>
@@ -18,7 +20,20 @@
 
     <string name="passworderrada">Password errada!</string>
     <string name="preenchercampos">Por favor preencha todos os campos</string>
+    <string name="title_activity_mapa">Map</string>
 
-
+    <string name="sucesso">Sucesso</string>
+    <string name="erro">Map</string>
+    <string name="TipoPonto">Tipo de ocorrência</string>
+    <string name="descricao">Descrição</string>
+    <string name="alterado">Alteração com Sucesso</string>
+    <string name="voltar">Voltar</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="noedit">Edição Não Disponível</string>
+    <string name="editar">Editar</string>
+    <string name="deletemarker">Marcador Apagado.</string>
+    <string name="apagar">Apagar</string>
+    <string name="deleteconfirma">Pretende apagar o Ponto?</string>
+    <string name="nodelete">Não é possível apagar.</string>
 
 </resources>

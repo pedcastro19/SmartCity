@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".markerdescri">
+
+
+    <TextView
+        android:id="@+id/labelTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/outputTituloMarker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorSecondary"
+        android:ems="10"
+        android:text="@string/titulo"
+        app:layout_constraintEnd_toEndOf="@+id/labelTitulo"
+        app:layout_constraintStart_toStartOf="@+id/labelTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/labelTitulo" />
+
+    <TextView
+        android:id="@+id/labelTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/TipoPonto"
+        app:layout_constraintEnd_toEndOf="@+id/outputTituloMarker"
+        app:layout_constraintStart_toStartOf="@+id/outputTituloMarker"
+        app:layout_constraintTop_toBottomOf="@+id/outputTituloMarker" />
+
+
+    <TextView
+        android:id="@+id/outputTipoMarker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorSecondary"
+        android:ems="10"
+        android:text="@string/titulo"
+        app:layout_constraintEnd_toEndOf="@+id/labelTipo"
+        app:layout_constraintStart_toStartOf="@+id/labelTipo"
+        app:layout_constraintTop_toBottomOf="@+id/labelTipo" />
+
+    <TextView
+        android:id="@+id/labelDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/descricao"
+        app:layout_constraintEnd_toEndOf="@+id/outputTipoMarker"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/outputTipoMarker"
+        app:layout_constraintTop_toBottomOf="@+id/outputTipoMarker" />
+
+
+    <TextView
+        android:id="@+id/OutputMarkerDescricao"
+        android:layout_width="328dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorSecondary"
+        android:ems="10"
+        android:text="@string/descricao"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/outputTipoMarker"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/outputTipoMarker"
+        app:layout_constraintTop_toBottomOf="@+id/outputTipoMarker"
+        app:layout_constraintVertical_bias="0.106" />
+
+    <Button
+        android:id="@+id/buttonEditar"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="96dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/editar"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintEnd_toEndOf="@+id/OutputMarkerDescricao"
+        app:layout_constraintStart_toStartOf="@+id/OutputMarkerDescricao"
+        app:layout_constraintTop_toBottomOf="@+id/OutputMarkerDescricao" />
+
+    <Button
+        android:id="@+id/buttonapagar"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/apagar"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintEnd_toEndOf="@+id/buttonEditar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonEditar"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEditar" />
+
+    <Button
+        android:id="@+id/buttonVoltar"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="88dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/voltar"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintEnd_toEndOf="@+id/buttonEditar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonEditar"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEditar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

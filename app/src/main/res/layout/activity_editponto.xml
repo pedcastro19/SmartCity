@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".editponto">
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/guardar"
+        android:layout_marginBottom="28dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.954"/>
+
+    <EditText
+        android:id="@+id/pontoTit"
+        android:layout_width="313dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorSecondary"
+        android:ems="10"
+        android:textColor="@color/colorPrimary"
+        android:hint="@string/titulo"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelTitulo" />
+
+    <EditText
+        android:id="@+id/pontoTipo"
+        android:layout_width="313dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorSecondary"
+        android:ems="10"
+        android:textColor="@color/colorPrimary"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/labelTipo"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/labelTipo"
+        app:layout_constraintTop_toBottomOf="@+id/labelTipo" />
+
+
+    <TextView
+        android:id="@+id/labelTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/TipoPonto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pontoTit" />
+
+    <EditText
+        android:id="@+id/pontoDesc"
+        android:layout_width="314dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorPrimary"
+        android:background="@color/colorSecondary"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/descricao"
+        app:layout_constraintEnd_toEndOf="@+id/pontoTipo"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/pontoTipo"
+        app:layout_constraintTop_toBottomOf="@+id/pontoTipo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
